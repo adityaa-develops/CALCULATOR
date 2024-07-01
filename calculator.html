@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="calcubg">
+        <h1 ID="title">CALCULATOR</h1>
+        <input type="text" placeholder="0" id="screen" readonly>
+        <div id="r1" class="r">
+            <div class="button" id="AC" onclick="current=''; document.querySelector('#screen').value=current">AC</div>
+            <div class="button" id="sq" onclick="current=current+'*'+current; document.querySelector('#screen').value=current"><sup><sup>^2</sup></sup></div>
+            <div class="button" id="%" onclick="current=current+'%'; document.querySelector('#screen').value=current">%</div>
+            <div class="button"  id="/" onclick="current=current+'/'; document.querySelector('#screen').value=current">/</div>
+        </div>
+        <div id="r2" class="r">
+            <div class="button" id="7" onclick="current=current+7; document.querySelector('#screen').value=current">7</div>
+            <div class="button" id="8" onclick="current=current+8; document.querySelector('#screen').value=current">8</div>
+            <div class="button" id="9" onclick="current=current+9; document.querySelector('#screen').value=current">9</div>
+            <div class="button" id="*" onclick="current=current+'*'; document.querySelector('#screen').value=current">*</div>
+        </div>
+        <div id="r3" class="r">
+            <div class="button" id="4" onclick="current=current+4; document.querySelector('#screen').value=current">4</div>
+            <div class="button" id="5" onclick="current=current+5; document.querySelector('#screen').value=current">5</div>
+            <div class="button" id="6" onclick="current=current+6; document.querySelector('#screen').value=current">6</div>
+            <div class="button" id="-" onclick="current=current+'-'; document.querySelector('#screen').value=current">-</div>
+        </div>
+        <div id="r4" class="r">
+            <div class="button" id="1" onclick="current=current+1; document.querySelector('#screen').value=current">1</div>
+            <div class="button" id="2" onclick="current=current+2; document.querySelector('#screen').value=current">2</div>
+            <div class="button" id="3" onclick="current=current+3; document.querySelector('#screen').value=current">3</div>
+            <div class="button" id="+" onclick="current=current+'+'; document.querySelector('#screen').value=current">+</div>
+        </div>
+        <div id="r5" class="r">
+            <div class="button" id="00" onclick="current=current+'00'; document.querySelector('#screen').value=current">00</div>
+            <div class="button" id="0" onclick="current=current+0; document.querySelector('#screen').value=current">0</div>
+            <div class="button" id="." onclick="current=current+'.'; document.querySelector('#screen').value=current">.</div>
+            <div class="button" id="=" onclick="current=eval(current); document.querySelector('#screen').value=current">=</div>
+        </div>
+        <p ID="sign"> Model AC2024</p>
+    </div>
+    <script>
+        let current=""
+        document.querySelector('#screen').value=current;
+    </script>
+</body>
+</html>
